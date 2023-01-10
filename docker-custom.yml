@@ -1,0 +1,19 @@
+version: '3'                   
+                                                     
+services:                              
+
+  php74:
+    build:
+      context: build/custom/php
+    environment:
+      PHP_IDE_CONFIG: "serverName=magento2.localhost"
+    extra_hosts:
+      - "host.docker.internal:172.17.0.1"
+
+  php81:
+    build:
+      context: build/custom/php
+    environment:
+      PHP_IDE_CONFIG: "serverName=magento2.localhost"
+    extra_hosts:
+      - "host.docker.internal:172.17.0.1"
